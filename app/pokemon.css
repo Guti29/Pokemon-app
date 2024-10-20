@@ -1,0 +1,64 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('https://cdn.wallpapersafari.com/36/66/5RDCHT.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    color: #333;
+    text-align: center;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0%;
+    overflow-x: hidden;
+}
+
+h1 {
+    color: #172de2;
+    text-shadow: 2px 2px #f99cb8;
+}
+
+/* Estilos del formulario */
+#formulario {
+    background-color: rgba(255, 255, 255, 0.468);
+    border: 2px solid #172de2;
+    border-radius: 10px;
+    display: inline-block;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#frase{
+    padding: 2%;
+    width: 300px;
+    color: #172de2;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-style: oblique;
+}
+
+button {
+    background-color: #172de2;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #f99cb8;
+}
