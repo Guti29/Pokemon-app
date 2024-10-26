@@ -1,6 +1,6 @@
 <?php
     $pokemon = [
-        ["Pokedex" => 150, "nombre" => "Mewtwo","ataque" => 110,"defensa" => 90,"ps" => 106,"spd" => 130, "img" => "https://images.wikidexcdn.net/mwuploads/wikidex/7/73/latest/20110216182804/Mewtwo_Ranger.png"],
+        ["Pokedex" => 150, "nombre" => "Mewtwo","ataque" => 110,"defensa" => 90,"ps" => 106,"spd" => 130, "img" => "https://images.wikidexcdn.net/mwuploads/wikidex/7/7c/latest/20230319130947/Mewtwo_icono_HOME.png"],
         ["Pokedex" => 571, "nombre" => "Zoroark","atk" => 105,"def" => 60,"ps" => 60,"spd" => 105, "img" => "https://images.wikidexcdn.net/mwuploads/wikidex/f/fe/latest/20230319132258/Zoroark_icono_HOME.png"],
         ["Pokedex" => 658, "nombre" => "Garchomp","atk" => 130,"def" => 95,"ps" => 108,"spd" => 102, "img" => "https://images.wikidexcdn.net/mwuploads/wikidex/b/b4/latest/20230319132705/Garchomp_icono_HOME.png"],
         ["Pokedex" => 491, "nombre" => "Darkrai","atk" => 90,"def" => 90,"ps" => 70,"spd" => 120, "img" => "https://images.wikidexcdn.net/mwuploads/wikidex/d/dd/latest/20230917181238/Darkrai_icono_HOME.png"],
@@ -21,3 +21,19 @@
         ["Pokedex" => 144, "nombre" => "Articuno","atk" => 85,"def" => 100,"ps" => 90,"spd" => 85, "img" => "https://images.wikidexcdn.net/mwuploads/wikidex/e/e7/latest/20230319125620/Articuno_icono_HOME.png"],
         ["Pokedex" => 194, "nombre" => "Jolteon","atk" => 65,"def" => 60,"ps" => 65,"spd" => 130, "img" => "https://images.wikidexcdn.net/mwuploads/wikidex/a/a8/latest/20230319130359/Jolteon_icono_HOME.png"],
     ];
+
+    function equipoMaquina($pokemon){
+        $pokemonElegidos = [];
+        $indicesSeleccionados = [];
+
+        while (count($pokemonElegidos) < 6) {
+            $indiceAleatorio = mt_rand(0, count($pokemon) - 1);
+
+            if (!isset($indicesSeleccionados[$indiceAleatorio])) {
+                $indicesSeleccionados[$indiceAleatorio] = true; 
+                $pokemonElegidos[] = $pokemon[$indiceAleatorio];
+            }
+        }
+
+        return $pokemonElegidos;
+    }
